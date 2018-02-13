@@ -8,19 +8,19 @@ int main( )
    short int a = -6730;
    float b = 68.123; 
    char c = 'J';
-   ofstream myfile{"abc.bin",ios::binary};
+   ofstream myfile1{"abc.bin",ios::binary};
    
-   if(myfile)
+   if(myfile1)
    {
-	   myfile<<a<<" "<<b<<" "<<c<<endl;
-	   myfile.write(reinterpret_cast<char*>(&a),sizeof(a));
-	   myfile.write(reinterpret_cast<char*>(&b),sizeof(b));
-	   myfile.write(reinterpret_cast<char*>(&c),sizeof(c));
+	   myfile1<<a<<" "<<b<<" "<<c<<endl;
+	   myfile1.write(reinterpret_cast<char*>(&a),sizeof(a));
+	   myfile1.write(reinterpret_cast<char*>(&b),sizeof(b));
+	   myfile1.write(reinterpret_cast<char*>(&c),sizeof(c));
    }
    else
    {
-	   cout<<"There was an error opening abc.txt"<<endl;
+	   cout<<"There was an error opening abc.bin"<<endl;
 	}
-	myfile.close();
+	myfile1.close();
 	return 0;
 }
