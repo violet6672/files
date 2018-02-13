@@ -12,7 +12,6 @@ int main( )
    
    if(myfile1)
    {
-	   myfile1<<a<<" "<<b<<" "<<c<<endl;
 	   myfile1.write(reinterpret_cast<char*>(&a),sizeof(a));
 	   myfile1.write(reinterpret_cast<char*>(&b),sizeof(b));
 	   myfile1.write(reinterpret_cast<char*>(&c),sizeof(c));
